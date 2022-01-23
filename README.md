@@ -1,41 +1,26 @@
 # npm-dependency-checker
 
 ![Build](https://github.com/unger1984/npm-dependency-checker/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
-
-## Template ToDo list
-- [x] Create a new [IntelliJ Platform Plugin Template][template] project.
-- [ ] Get familiar with the [template documentation][template].
-- [ ] Verify the [pluginGroup](/gradle.properties), [plugin ID](/src/main/resources/META-INF/plugin.xml) and [sources package](/src/main/kotlin).
-- [ ] Review the [Legal Agreements](https://plugins.jetbrains.com/docs/marketplace/legal-agreements.html).
-- [ ] [Publish a plugin manually](https://plugins.jetbrains.com/docs/intellij/publishing-plugin.html?from=IJPluginTemplate) for the first time.
-- [ ] Set the Plugin ID in the above README badges.
-- [ ] Set the [Deployment Token](https://plugins.jetbrains.com/docs/marketplace/plugin-upload.html).
-- [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
+[![Version](https://img.shields.io/jetbrains/plugin/v/18469.svg)](https://plugins.jetbrains.com/plugin/18469)
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/18469.svg)](https://plugins.jetbrains.com/plugin/18469)
 
 <!-- Plugin description -->
-This Fancy IntelliJ Platform Plugin is going to be your implementation of the brilliant ideas that you have.
+This IntelliJ plugin inspects your package.json file to find if you're using the latest package versions from the [registry.npmjs.org](https://registry.npmjs.org) - the official package repository.
 
-This specific section is a source for the [plugin.xml](/src/main/resources/META-INF/plugin.xml) file which will be extracted by the [Gradle](/build.gradle.kts) during the build process.
+Inspired by [Flutter Pub Version Checker](https://github.com/pszklarska/FlutterPubVersionChecker), I decided to write something similar for the package. But I don’t know Kotlin at all, because it turned out what happened). I will be glad to feedback and help
 
-To keep everything working, do not remove `<!-- ... -->` sections. 
+## How to use?
+
+Once plugin is installed, go to the package.json file. If plugin finds that newer version is available, you'll see it highlighted.
+To fix that, press Cmd+Enter (Alt+Enter) or click the action indicator to the left of the caret to open the action list and choose "Replace with".
 <!-- Plugin description end -->
 
-## Installation
+<img src="img/quick_fix.png" alt="npm-dependency-checker in action"/>
 
-- Using IDE built-in plugin system:
-  
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "npm-dependency-checker"</kbd> >
-  <kbd>Install Plugin</kbd>
-  
-- Manually:
+## What's new?
 
-  Download the [latest release](https://github.com/unger1984/npm-dependency-checker/releases/latest) and install it manually using
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
+See [CHANGELOG](CHANGELOG.md) to see what's new.
 
+## How can I help?
 
----
-Plugin based on the [IntelliJ Platform Plugin Template][template].
-
-[template]: https://github.com/JetBrains/intellij-platform-plugin-template
+Feel free to send [Pull Request](https://github.com/unger1984/npm-dependency-checker/pulls) or file a new [Issue](https://github.com/unger1984/npm-dependency-checker/issues)! Or...

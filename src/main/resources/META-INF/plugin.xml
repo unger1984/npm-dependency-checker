@@ -1,18 +1,20 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.unger1984.npmdependencychecker</id>
+    <id>com.unger1984.npmdependencychecker</id>
     <name>npm-dependency-checker</name>
-    <vendor>unger1984</vendor>
+    <vendor email="unger1984@gmail.com" url="https://github.com/unger1984">unger1984</vendor>
 
     <depends>com.intellij.modules.platform</depends>
 
+    <!-- Code Inspection Component  -->
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.unger1984.npmdependencychecker.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.unger1984.npmdependencychecker.services.MyProjectService"/>
+        <localInspection
+            language="JSON"
+            displayName="Npm Packages latest versions"
+            groupBundle="messages.InspectionsBundle"
+            groupKey="group.names.dependency.issues"
+            level="WARNING"
+            enabledByDefault="true"
+            implementationClass="com.unger1984.npmdependencychecker.inspection.NpmPackagesInspection"/>
     </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.unger1984.npmdependencychecker.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
 </idea-plugin>
