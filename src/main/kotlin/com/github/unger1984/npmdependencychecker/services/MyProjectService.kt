@@ -1,7 +1,7 @@
-package org.jetbrains.plugins.template.services
+package com.github.unger1984.npmdependencychecker.services
 
 import com.intellij.openapi.project.Project
-import org.jetbrains.plugins.template.MyBundle
+import com.github.unger1984.npmdependencychecker.MyBundle
 
 class MyProjectService(project: Project) {
 
