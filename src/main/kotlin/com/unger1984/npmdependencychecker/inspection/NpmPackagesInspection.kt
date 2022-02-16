@@ -49,9 +49,9 @@ class PackageJsonElementVisitor(
                     psi,
                     "Latest available version is: ${dependency.version}",
                     ProblemHighlightType.LIKE_UNKNOWN_SYMBOL,
-                    UpdateDependencyQuickFix(psi, "^${dependency.version}"),
-                    UpdateDependencyQuickFix(psi, "~${dependency.version}"),
-                    UpdateDependencyQuickFix(psi, dependency.version)
+                    UpdateDependencyQuickFix(psi, dependency.version, 3),
+                    UpdateDependencyQuickFix(psi, "~${dependency.version}", 2),
+                    UpdateDependencyQuickFix(psi, "^${dependency.version}", 1)
                 )
             }
         }
