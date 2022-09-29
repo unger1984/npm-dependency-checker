@@ -4,6 +4,10 @@
 
 ## [Unreleased]
 
+## 0.1.1
+
+* Fix compatibility problems
+
 ## 0.1.0
 
 * Fix freezed. Change Inspector to Annotator

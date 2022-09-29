@@ -5,6 +5,8 @@
     <vendor email="unger1984@gmail.com" url="https://github.com/unger1984">unger1984</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.java</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <externalAnnotator
