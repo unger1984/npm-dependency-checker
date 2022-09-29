@@ -4,6 +4,10 @@
 
 ## [Unreleased]
 
+## 0.1.0
+
+* Fix freezed. Change Inspector to Annotator
+
 ## 0.0.3
 
 - Changed the order of actions on the hint

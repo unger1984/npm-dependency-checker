@@ -9,9 +9,10 @@ import java.io.IOException
 
 const val NPM_API_URL = "https://registry.npmjs.org/"
 
-class VersionsRepository {
+class VersionsRepository(
+    private val httpClient: DependencyHttpClient,
+) {
 
-    private val httpClient = DependencyHttpClient()
     private val cachedDependenciesList = mutableListOf<Dependency>()
 
     private val mapper = ObjectMapper()
@@ -20,9 +21,9 @@ class VersionsRepository {
 
     fun getLatestVersion(packageName: String): String {
         val cachedDependency = cachedDependenciesList.find { it.pkgName == packageName }
-        return if(cachedDependency != null){
+        return if (cachedDependency != null) {
             cachedDependency.version
-        }else{
+        } else {
             val version = fetchDependencyVersion(packageName);
             cachedDependenciesList.add(Dependency(packageName, version))
             version

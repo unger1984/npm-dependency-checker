@@ -6,15 +6,9 @@
 
     <depends>com.intellij.modules.platform</depends>
 
-    <!-- Code Inspection Component  -->
     <extensions defaultExtensionNs="com.intellij">
-        <localInspection
+        <externalAnnotator
             language="JSON"
-            displayName="Npm Packages latest versions"
-            groupBundle="messages.InspectionsBundle"
-            groupKey="group.names.dependency.issues"
-            level="WARNING"
-            enabledByDefault="true"
-            implementationClass="com.unger1984.npmdependencychecker.inspection.NpmPackagesInspection"/>
+            implementationClass="com.unger1984.npmdependencychecker.annotator.NpmPackagesAnnotator"/>
     </extensions>
 </idea-plugin>
