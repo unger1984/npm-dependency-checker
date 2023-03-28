@@ -5,9 +5,9 @@ fun properties(key: String) = project.findProperty(key).toString()
 
 plugins {
     id("java")
-    id("org.jetbrains.kotlin.jvm") version "1.6.0"
-    id("org.jetbrains.intellij") version "1.3.0"
-    id("org.jetbrains.changelog") version "1.3.1"
+    id("org.jetbrains.kotlin.jvm") version "1.8.10"
+    id("org.jetbrains.intellij") version "1.13.2"
+    id("org.jetbrains.changelog") version "2.0.0"
     id("org.jetbrains.qodana") version "0.1.13"
 }
 
@@ -20,8 +20,8 @@ repositories {
 }
 
 dependencies {
-    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.1")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.14.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
 }
 
 // Configure Gradle IntelliJ Plugin - read more: https://github.com/JetBrains/gradle-intellij-plugin

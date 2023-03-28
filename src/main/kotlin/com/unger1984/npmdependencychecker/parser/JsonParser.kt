@@ -31,7 +31,9 @@ class JsonParser(
 
     private fun getNotMatchingDependenciesList(dependencies: List<DependencyDescription>): List<DependencyDescription> {
         return dependencies.mapNotNull {
-            if (it.latestVersion != it.dependency.currentVersion) it else null
+            if (it.latestVersion != it.dependency.currentVersion &&
+                "^${it.latestVersion}" != it.dependency.currentVersion &&
+                "~${it.latestVersion}" != it.dependency.currentVersion) it else null
         }
     }
 }

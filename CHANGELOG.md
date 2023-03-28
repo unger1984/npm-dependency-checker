@@ -4,6 +4,10 @@
 
 ## [Unreleased]
 
+## 0.1.2
+
+* Update for 2023.1
+
 ## 0.1.1
 
 * Fix compatibility problems
